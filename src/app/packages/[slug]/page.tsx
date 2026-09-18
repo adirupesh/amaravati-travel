@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Clock, MapPin, Calendar, ArrowUpRight, Check } from "lucide-react";
 import { packages } from "@/lib/data";
 import { money } from "@/lib/site";
+import { whatsappLink } from "@/lib/whatsapp";
 import { TravelImage } from "@/components/travel-image";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -129,9 +130,15 @@ export default async function PackageDetail({
             Tell us what you have in mind, or use this route as the start of
             your own plan.
           </p>
-          <Link className="button" href={`/contact/?package=${p.slug}`}>
-            Enquire about this trip <ArrowUpRight size={17} />
-          </Link>
+          <a
+            className="button"
+            href={whatsappLink(p.title)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Enquire on WhatsApp <ArrowUpRight size={17} aria-hidden="true" />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
           <Link
             className="button button-outline"
             href={`/planner/?package=${p.slug}`}

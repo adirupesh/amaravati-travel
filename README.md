@@ -65,7 +65,9 @@ Home hero and destination search; package category filtering, free-text search a
 
 The planner creates 1–30 inclusive travel days, optionally fills empty days from a sample package, and keeps existing entries on matching dates when dates change. A sample itinerary is a starting point; adjust its sequence to fit your chosen duration. Change the name, travellers, dates, and daily destination, activities, and notes. Save one draft in browser `localStorage`, restore it explicitly, download versioned JSON, import validated JSON, or print. Later edits require another save. Local storage may be unavailable in private or restricted browsers; downloaded copies remain an alternative. A fresh plan preserves the saved draft. Imported files are limited to 250 KB and checked for field types, lengths, date consistency, traveller bounds, and supported format version.
 
-The contact form validates required fields and prepares a downloadable text enquiry. **It does not send email, upload personal details, make reservations, or accept payments.** Configure a backend or form provider if you need delivery. No fake successful-send state is shown.
+Package and weekly-deal enquiry buttons open WhatsApp directly at **+91 9030755369**, with the trip title and (for deals) promotion week in a prepared message. The visitor reviews and sends the message in WhatsApp; opening the link does not automatically send it. The contact page also offers a general WhatsApp chat link. Update the agency number in `src/lib/whatsapp.ts` if needed.
+
+The contact form validates required fields and prepares a downloadable text enquiry. **It does not send email, upload personal details, make reservations, or accept payments.** No fake successful-send state is shown.
 
 The optional, feature-detected WebMCP `read_current_itinerary` tool exposes the same visible itinerary as read-only structured data in supported browsers; it does not save, submit, or transmit an enquiry.
 

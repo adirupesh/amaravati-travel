@@ -5,6 +5,7 @@ import { ArrowUpRight, CalendarDays, Clock, Tag } from "lucide-react";
 import { TravelImage } from "./travel-image";
 import { packages } from "@/lib/data";
 import { money } from "@/lib/site";
+import { whatsappLink } from "@/lib/whatsapp";
 import { displayDate } from "@/lib/planner";
 import {
   DealWeek,
@@ -91,14 +92,16 @@ export function WeeklyDeals({ initialWeek }: { initialWeek: DealWeek }) {
                   </div>
                   <p>Save {money(trip.price - price)} per person</p>
                 </div>
-                <Link
+                <a
                   className="button weekly-enquiry"
-                  href={`/contact/?package=${trip.slug}&deal=${week.start}`}
-                  aria-label={`Enquire about the weekly deal for ${trip.title}`}
+                  href={whatsappLink(trip.title, week.start)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Enquire on WhatsApp about the weekly deal for ${trip.title} (opens in a new tab)`}
                 >
-                  Enquire about this deal{" "}
+                  Enquire on WhatsApp{" "}
                   <ArrowUpRight size={17} aria-hidden="true" />
-                </Link>
+                </a>
                 <Link
                   className="weekly-details-link"
                   href={`/packages/${trip.slug}/`}
@@ -126,8 +129,9 @@ export function WeeklyDeals({ initialWeek }: { initialWeek: DealWeek }) {
             dates and final arrangements must be confirmed separately.
           </li>
           <li>
-            This site prepares an enquiry draft. It does not confirm
-            availability, take payments, or reserve a trip.
+            WhatsApp opens a prepared message for you to review and send. This
+            site does not confirm availability, take payments, or reserve a
+            trip.
           </li>
         </ul>
       </section>

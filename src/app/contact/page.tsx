@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { ContactForm } from "@/components/contact-form";
+import { whatsappLink, whatsappDisplayNumber } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Contact",
   description:
@@ -34,13 +35,19 @@ export default function Contact() {
               <br />
               India & international journeys
             </p>
-            <p>
-              This sample site is ready for your agency’s verified phone, email,
-              address, and opening hours.
-            </p>
+            <p>WhatsApp: {whatsappDisplayNumber}</p>
+            <a
+              className="button"
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chat on WhatsApp
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
             <p className="form-note">
-              Use the form to prepare a downloadable enquiry draft. Live enquiry
-              delivery can be connected when your contact details are ready.
+              Chat directly on WhatsApp, or use the form to prepare a
+              downloadable enquiry draft.
             </p>
           </div>
         </div>
