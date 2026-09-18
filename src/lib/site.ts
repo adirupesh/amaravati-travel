@@ -9,6 +9,7 @@ export const site = {
 export const links = [
   { href: "/", label: "Home" },
   { href: "/packages/", label: "Packages" },
+  { href: "/weekly-deals/", label: "Weekly deals" },
   { href: "/destinations/", label: "Destinations" },
   { href: "/planner/", label: "Itinerary planner" },
   { href: "/about/", label: "About" },

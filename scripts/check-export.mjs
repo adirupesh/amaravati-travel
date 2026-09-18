@@ -9,6 +9,7 @@ const routes = [
   "destinations",
   "packages",
   "planner",
+  "weekly-deals",
   ...[
     "kerala-backwaters",
     "rajasthan-royal-trail",

@@ -1624,6 +1624,155 @@ svg {
     display: none;
   }
 }
+.weekly-period {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 25px;
+}
+.weekly-period h2 {
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+}
+.weekly-dates {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+  margin: 0;
+  flex-shrink: 0;
+  color: var(--teal);
+  font-size: 0.875rem;
+}
+.weekly-dates svg {
+  margin-top: 4px;
+}
+.weekly-dates small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.weekly-demo-note {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+  background: var(--paper);
+  padding: 16px 20px;
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 30px;
+}
+.weekly-demo-note svg {
+  margin-top: 4px;
+  flex-shrink: 0;
+  color: var(--teal);
+}
+.weekly-discount {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  border-radius: 24px;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 7px 14px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.weekly-price {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.weekly-price > span {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+.weekly-price del {
+  margin-left: 6px;
+}
+.weekly-price > div {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 5px 0;
+}
+.weekly-price strong {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.weekly-price > div span {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+.weekly-price p {
+  font-size: 0.875rem;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.weekly-enquiry {
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 13px 14px;
+  gap: 9px;
+}
+.weekly-details-link {
+  font-size: 0.875rem;
+  align-self: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-top: 14px;
+  color: var(--teal);
+}
+.weekly-terms {
+  background: var(--paper);
+  padding: 30px 34px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.weekly-terms h2 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+.weekly-terms ul {
+  padding-left: 20px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.weekly-terms li {
+  margin-bottom: 10px;
+}
+.weekly-terms li:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .weekly-period {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .package-grid > .weekly-card:last-child:nth-child(3) {
+    max-width: calc(50% - 12px);
+  }
+}
+@media (max-width: 520px) {
+  .weekly-terms {
+    padding: 24px 22px;
+  }
+  .package-grid > .weekly-card:last-child:nth-child(3) {
+    max-width: none;
+  }
+  .weekly-dates {
+    font-size: 0.8125rem;
+  }
+  .weekly-price strong {
+    font-size: 1.75rem;
+  }
+}
 @media print {
   .site-header,
   .site-footer,

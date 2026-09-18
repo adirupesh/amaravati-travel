@@ -19,7 +19,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Explore</h2>
-          {links.slice(1, 4).map((l) => (
+          {links.slice(1, 5).map((l) => (
             <Link key={l.href} href={l.href}>
               {l.label}
             </Link>

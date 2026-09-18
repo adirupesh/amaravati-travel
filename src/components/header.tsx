@@ -27,23 +27,25 @@ export function Header() {
       <div className="container header-inner">
         <Brand />
         <nav className="desktop-nav" aria-label="Main navigation">
-          {links.slice(0, 5).map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              aria-current={
-                (
-                  path === "/"
-                    ? l.href === "/"
-                    : l.href !== "/" && path.startsWith(l.href.slice(0, -1))
-                )
-                  ? "page"
-                  : undefined
-              }
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links
+            .filter((l) => l.href !== "/contact/")
+            .map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={
+                  (
+                    path === "/"
+                      ? l.href === "/"
+                      : l.href !== "/" && path.startsWith(l.href.slice(0, -1))
+                  )
+                    ? "page"
+                    : undefined
+                }
+              >
+                {l.label}
+              </Link>
+            ))}
         </nav>
         <Link className="button button-small header-cta" href="/contact/">
           Let’s talk travel <ArrowUpRight size={16} />

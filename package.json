@@ -9,6 +9,7 @@
     "preview": "serve out -l 3000",
     "check:planner": "node scripts/check-planner.mjs",
     "check:export": "node scripts/check-export.mjs",
+    "check:deals": "node scripts/check-weekly-deals.mjs",
     "format": "prettier --write src scripts public *.json *.ts *.mjs README.md"
   },
   "dependencies": {

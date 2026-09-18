@@ -2,12 +2,16 @@
 import { useEffect, useState } from "react";
 import { Download, ArrowUpRight } from "lucide-react";
 import { packages } from "@/lib/data";
+import { dateNumber, displayDate } from "@/lib/planner";
 export function ContactForm() {
   const [trip, setTrip] = useState("");
   const [draft, setDraft] = useState("");
+  const [dealWeek, setDealWeek] = useState("");
   useEffect(() => {
     const slug = new URLSearchParams(window.location.search).get("package");
     if (packages.some((p) => p.slug === slug)) setTrip(slug || "");
+    const week = new URLSearchParams(window.location.search).get("deal") || "";
+    if (Number.isFinite(dateNumber(week))) setDealWeek(week);
   }, []);
   function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -15,7 +19,7 @@ export function ContactForm() {
     const title =
       packages.find((p) => p.slug === trip)?.title || "A custom journey";
     setDraft(
-      `Travel enquiry\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nJourney: ${title}\nTravellers: ${data.get("travellers")}\n\n${data.get("message")}\n`,
+      `Travel enquiry\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nJourney: ${title}\nTravellers: ${data.get("travellers")}${dealWeek ? `\nReferenced sample weekly promotion: week of ${displayDate(dealWeek)}` : ""}\n\n${data.get("message")}\n`,
     );
   }
   function download() {
@@ -34,6 +38,12 @@ export function ContactForm() {
       onSubmit={submit}
       onChange={() => setDraft("")}
     >
+      {dealWeek && (
+        <p className="weekly-demo-note">
+          Sample promotion reference: week of {displayDate(dealWeek)}. Final
+          pricing and availability require confirmation.
+        </p>
+      )}
       <div className="field-grid">
         <div className="field">
           <label htmlFor="contact-name">Your name *</label>

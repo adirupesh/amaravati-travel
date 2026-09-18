@@ -18,6 +18,7 @@ Open http://127.0.0.1:3000. If your platform does not include Corepack, install 
 ```sh
 pnpm typecheck
 pnpm check:planner
+pnpm check:deals
 pnpm build
 pnpm check:export
 pnpm preview
@@ -75,6 +76,12 @@ The optional, feature-detected WebMCP `read_current_itinerary` tool exposes the 
 3. Update the original wordmark/compass component and favicon for your authorised branding.
 4. Configure your actual site origin and rebuild. Verify the site’s existing access settings before sharing it publicly.
 5. Connect enquiry delivery if required and add the corresponding privacy information. The existing demo flow remains entirely local.
+
+## Weekly promotions
+
+`/weekly-deals/` is the single weekly promotion page, linked in the desktop/mobile menus and footer. It displays three sample offers with regular prices, illustrative percentage savings, discounted prices, package details, and enquiry links. Two selections rotate every Monday at 00:00 in `Asia/Kolkata`, including while the page stays open. No scheduler, backend, or weekly rebuild is required for browser rotation. The prerendered HTML reflects the build week; JavaScript updates it to the current week after loading. Rebuild weekly if you also need the initial HTML and non-JavaScript view to show the current week.
+
+Edit `src/lib/weekly-deals.ts` to choose the sample packages and discounts; regular prices come from `src/lib/data.ts`. These repeating sample offers are not inventory-aware or live promotions. Replace the demo selections and conditions with agency-approved offers before advertising real deals. Weekly selection dates are not the customer's travel dates.
 
 ## Photography
 
