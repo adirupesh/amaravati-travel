@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @theme {
-  --color-navy: #123947;
-  --color-gold: #dbb477;
+  --color-navy: #122e3d;
+  --color-teal: #18536a;
+  --color-gold: #dcb577;
   --font-sans: Arial, Helvetica, sans-serif;
   --font-serif: Georgia, "Times New Roman", serif;
 }
@@ -11,7 +12,7 @@
   --gold: #dcb577;
   --muted: #5b6770;
   --line: #e1e6e6;
-  --paper: #f6f8f7;
+  --paper: #f4f7f6;
 }
 * {
   box-sizing: border-box;
@@ -193,7 +194,7 @@ svg {
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
-  height: 94px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -303,7 +304,7 @@ svg {
 }
 .hero-actions {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   align-items: center;
   margin-top: 30px;
 }
@@ -312,8 +313,15 @@ svg {
   display: flex;
   gap: 12px;
   align-items: center;
-  border-bottom: 1px solid #8cabb7;
-  padding: 11px 0;
+  border: 1px solid #e0e9ec;
+  border-radius: 7px;
+  padding: 15px 23px;
+  min-height: 48px;
+  font-weight: 600;
+  background: #122e3d26;
+}
+.hero-secondary:hover {
+  background: #ffffff18;
 }
 .hero-search {
   display: flex;
@@ -403,6 +411,9 @@ svg {
   gap: 24px;
 }
 .package-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: 1px solid var(--line);
   border-radius: 12px;
   overflow: hidden;
@@ -416,6 +427,7 @@ svg {
   transform: translateY(-3px);
 }
 .card-image {
+  flex-shrink: 0;
   display: block;
   position: relative;
   height: 235px;
@@ -431,18 +443,21 @@ svg {
   position: absolute;
   left: 16px;
   top: 16px;
-  background: #fffef1ed;
+  background: #fffffff2;
   padding: 5px 13px;
   border-radius: 30px;
-  font-size: 0.7rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: #233e46;
 }
 .card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 24px;
 }
 .card-eyebrow {
-  font-size: 0.69rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--teal);
@@ -457,16 +472,18 @@ svg {
   font-size: 1.55rem;
   margin-bottom: 12px;
   letter-spacing: -0.04em;
+  min-height: 3.5rem;
 }
 .card-content > p:not(.card-eyebrow) {
-  font-size: 0.87rem;
+  font-size: 1rem;
   color: var(--muted);
   min-height: 46px;
 }
 .card-meta {
   display: flex;
-  gap: 18px;
-  font-size: 0.7rem;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  font-size: 0.8125rem;
   color: #607078;
   margin: 21px 0;
 }
@@ -476,20 +493,29 @@ svg {
   gap: 6px;
 }
 .card-bottom {
+  margin-top: auto;
   border-top: 1px solid var(--line);
   padding-top: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 .card-bottom span {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: #6b777d;
   display: block;
 }
 .card-bottom strong {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 600;
+}
+.package-view-button {
+  padding: 11px 14px;
+  gap: 7px;
+  min-height: 44px;
+  font-size: 0.8125rem;
+  white-space: nowrap;
 }
 .circle-link {
   width: 42px;
@@ -506,7 +532,7 @@ svg {
   color: white;
 }
 .destination-section {
-  background: #f4f7f6;
+  background: var(--paper);
 }
 .destination-grid {
   display: grid;
@@ -588,7 +614,7 @@ svg {
 }
 .story-copy > p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 .check-list {
   list-style: none;
@@ -609,7 +635,7 @@ svg {
   margin-top: 3px;
 }
 .planner-banner {
-  background: #163c4b;
+  background: var(--ink);
   color: white;
   padding: 60px 0;
   position: relative;
@@ -639,10 +665,10 @@ svg {
   margin: 20px 0 27px;
 }
 .site-footer {
-  background: #0e2835;
+  background: var(--ink);
   color: #c5d1d5;
   padding-top: 57px;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
 }
 .brand-light {
   color: #fff;
@@ -698,7 +724,7 @@ svg {
   color: #91a9b4;
 }
 .page-intro {
-  background: #163f50;
+  background: var(--ink);
   color: white;
   text-align: center;
   padding: 65px 0 70px;
@@ -892,7 +918,7 @@ svg {
   margin: 5px 0 8px;
 }
 .itinerary-item p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 .inclusion-grid {
@@ -936,7 +962,7 @@ svg {
   margin: 8px 0 14px;
 }
 .tile-copy p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 .about-values {
@@ -1371,9 +1397,23 @@ svg {
   }
   .hero-actions {
     flex-direction: column;
-    align-items: start;
+    align-items: stretch;
     gap: 14px;
     margin-top: 25px;
+  }
+  .hero-secondary {
+    justify-content: center;
+  }
+  .card-bottom {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .card-bottom > div,
+  .package-view-button {
+    width: 100%;
+  }
+  .card-content h3 {
+    min-height: 0;
   }
   .hero-search {
     margin-top: 25px;

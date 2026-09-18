@@ -38,11 +38,11 @@ export function PackageCard({ trip }: { trip: TravelPackage }) {
             <strong>{money(trip.price)}</strong>
           </div>
           <Link
-            className="circle-link"
+            className="button package-view-button"
             href={`/packages/${trip.slug}/`}
-            aria-label={`View ${trip.title}`}
+            aria-label={`View package: ${trip.title}`}
           >
-            <ArrowUpRight size={20} />
+            View package <ArrowUpRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>

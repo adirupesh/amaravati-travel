@@ -38,10 +38,10 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link href="/packages/" className="button button-gold">
-              Explore our journeys <ArrowUpRight size={18} />
+              Explore packages <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
             <Link href="/planner/" className="hero-secondary">
-              Plan your own trip <ArrowRight size={18} />
+              Plan your trip <ArrowRight size={18} aria-hidden="true" />
             </Link>
           </div>
           <HomeSearch />
