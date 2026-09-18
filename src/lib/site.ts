@@ -2,7 +2,7 @@ export const site = {
   name: "Amaravati Tours & Travel",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://amaravati-journeys-atelier.wiry-olm-6146.chatgpt.site",
+    "https://amaravati-journeys-atelier.psri38157.chatgpt.site",
   description:
     "Thoughtfully planned journeys across India and beyond. Explore sample travel packages and build your own day-by-day itinerary.",
 };
