@@ -71,6 +71,37 @@ export default async function PackageDetail({
               {p.season}
             </span>
           </div>
+          <section
+            className="package-video-section"
+            aria-labelledby="package-video-title"
+          >
+            <div className="package-video-heading">
+              <p className="eyebrow">A GLIMPSE OF THE JOURNEY</p>
+              <h2 id="package-video-title">Experience {p.region} in motion.</h2>
+              <p>
+                A short travel moment to set the mood for your route through{" "}
+                {p.route}.
+              </p>
+            </div>
+            <figure className="package-video">
+              <video
+                controls
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster={p.image}
+                aria-describedby="package-video-caption"
+              >
+                <source src="/recent-travel-india.mp4" type="video/mp4" />
+                Your browser does not support this travel video.
+              </video>
+              <figcaption id="package-video-caption">
+                Illustrative travel footage · replace with this package’s own
+                video when available
+              </figcaption>
+            </figure>
+          </section>
           <h2>The moments to look forward to</h2>
           <ul className="check-list">
             {p.highlights.map((h) => (

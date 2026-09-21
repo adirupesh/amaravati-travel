@@ -65,6 +65,8 @@ Home hero and destination search; package category filtering, free-text search a
 
 The home page includes a responsive recent-travel video and practical experience notes. The bundled sample clip is licensed for commercial use by Coverr and should be replaced with agency-owned footage when available.
 
+Every package-detail page includes a responsive video preview with native playback controls, a package-specific heading and route description, and a clear illustrative-footage label. The shared sample clip keeps the static site lightweight; it can be replaced with package-specific agency videos later.
+
 The footer includes Facebook, Instagram, and YouTube icons using clearly marked sample links. Replace the platform home-page URLs in `src/components/footer.tsx` with the agency's profile URLs before promotion.
 
 The planner creates 1–30 inclusive travel days, optionally fills empty days from a sample package, and keeps existing entries on matching dates when dates change. A sample itinerary is a starting point; adjust its sequence to fit your chosen duration. Change the name, travellers, dates, and daily destination, activities, and notes. Save one draft in browser `localStorage`, restore it explicitly, download versioned JSON, import validated JSON, or print. Later edits require another save. Local storage may be unavailable in private or restricted browsers; downloaded copies remain an alternative. A fresh plan preserves the saved draft. Imported files are limited to 250 KB and checked for field types, lengths, date consistency, traveller bounds, and supported format version.
