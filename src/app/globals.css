@@ -707,6 +707,39 @@ svg {
   font-size: 0.7rem;
   color: #a2b7c0;
 }
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.footer-socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ffffff2e;
+  border-radius: 50%;
+  color: #e0c28e;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  background: #ffffff12;
+  border-color: #e0c28e;
+  color: #fff;
+}
+.footer-socials > span {
+  color: #91a9b4;
+  font-size: 0.68rem;
+}
 .footer-grid .footer-contact {
   display: flex !important;
   gap: 9px;

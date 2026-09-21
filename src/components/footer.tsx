@@ -16,6 +16,33 @@ export function Footer() {
           <span className="footer-location">
             <MapPin size={16} /> Amaravati, Andhra Pradesh, India
           </span>
+          <div className="footer-socials" aria-label="Social media">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook (sample link, opens in a new tab)"
+            >
+              <span aria-hidden="true">f</span>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram (sample link, opens in a new tab)"
+            >
+              <span aria-hidden="true">ig</span>
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube (sample link, opens in a new tab)"
+            >
+              <span aria-hidden="true">yt</span>
+            </a>
+            <span>Sample social links</span>
+          </div>
         </div>
         <div>
           <h2>Explore</h2>
