@@ -69,6 +69,10 @@ Every package-detail page includes a responsive video preview with native playba
 
 The footer includes Facebook, Instagram, and YouTube icons using clearly marked sample links. Replace the platform home-page URLs in `src/components/footer.tsx` with the agency's profile URLs before promotion.
 
+## Moderated traveller reviews
+
+`/reviews/` lists approved reviews, filters them by package, and accepts real public submissions. New reviews are stored with `pending` status and never appear publicly until approved. The form validates length and ratings, includes consent and a honeypot, limits repeated submissions, and keeps reviewer email private. The email is removed from the stored record after an approval or rejection. The site owner moderates submissions at `/reviews/moderate/` after signing in with ChatGPT; server-side authorization checks the configured `REVIEW_ADMIN_USER_ID`. Package pages link directly to their filtered reviews.
+
 The planner creates 1–30 inclusive travel days, optionally fills empty days from a sample package, and keeps existing entries on matching dates when dates change. A sample itinerary is a starting point; adjust its sequence to fit your chosen duration. Change the name, travellers, dates, and daily destination, activities, and notes. Save one draft in browser `localStorage`, restore it explicitly, download versioned JSON, import validated JSON, or print. Later edits require another save. Local storage may be unavailable in private or restricted browsers; downloaded copies remain an alternative. A fresh plan preserves the saved draft. Imported files are limited to 250 KB and checked for field types, lengths, date consistency, traveller bounds, and supported format version.
 
 Package and weekly-deal enquiry buttons open WhatsApp directly at **+91 9030755369**, with the trip title and (for deals) promotion week in a prepared message. The visitor reviews and sends the message in WhatsApp; opening the link does not automatically send it. The contact page also offers a general WhatsApp chat link. Update the agency number in `src/lib/whatsapp.ts` if needed.

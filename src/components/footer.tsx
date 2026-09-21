@@ -57,6 +57,7 @@ export function Footer() {
           <Link href="/about/">Our approach</Link>
           <Link href="/contact/">Get in touch</Link>
           <Link href="/packages/">Find your next journey</Link>
+          <Link href="/reviews/">Traveller reviews</Link>
         </div>
         <div>
           <h2>Have a journey in mind?</h2>

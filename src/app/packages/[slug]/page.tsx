@@ -176,6 +176,12 @@ export default async function PackageDetail({
           >
             Use in itinerary planner
           </Link>
+          <Link
+            className="booking-review-link"
+            href={`/reviews/?package=${p.slug}`}
+          >
+            Read or write a review
+          </Link>
           <p className="booking-note">
             Illustrative pricing. This website does not take payments or confirm
             bookings.
