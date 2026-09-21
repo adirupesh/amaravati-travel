@@ -64,6 +64,62 @@ export default function Home() {
           </span>
         </div>
       </div>
+      <section
+        className="section container recent-journey"
+        aria-labelledby="recent-journey-title"
+      >
+        <div className="recent-journey-copy">
+          <p className="eyebrow">RECENT TRAVEL MOMENTS</p>
+          <h2 id="recent-journey-title">
+            The experience begins before you arrive.
+          </h2>
+          <p>
+            A recent arrival in Kerala: tropical skies, warm air, and the first
+            glimpse of a journey about to unfold.
+          </p>
+          <div className="recent-journey-notes" aria-label="Travel information">
+            <div>
+              <strong>Featured experience</strong>
+              <span>Kerala coast and backwaters</span>
+            </div>
+            <div>
+              <strong>Good time to travel</strong>
+              <span>October to March</span>
+            </div>
+            <div>
+              <strong>Travel style</strong>
+              <span>Slow days, local food, quiet waterways</span>
+            </div>
+          </div>
+          <p className="media-credit">
+            Illustrative travel footage courtesy of{" "}
+            <a
+              href="https://coverr.co/videos/plane-landing-in-india-fm7myit2et"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Coverr
+            </a>
+            .
+          </p>
+        </div>
+        <figure className="recent-journey-media">
+          <video
+            controls
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="A plane arriving in Kerala, India"
+          >
+            <source src="/recent-travel-india.mp4" type="video/mp4" />
+            Your browser does not support this travel video.
+          </video>
+          <figcaption>
+            Arriving in Kerala · a 17-second travel moment
+          </figcaption>
+        </figure>
+      </section>
       <section className="section container">
         <SectionHeading
           eyebrow="A FEW OF OUR FAVOURITES"
